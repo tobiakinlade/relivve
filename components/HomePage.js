@@ -1,5 +1,13 @@
-import React from 'react';
-import Image from 'next/image';
+import React from 'react'
+import Image from 'next/image'
+import {
+  BeakerIcon,
+  ChatAltIcon,
+  PlusCircleIcon,
+  PuzzleIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+} from '@heroicons/react/outline'
 
 function Home() {
   return (
@@ -8,22 +16,31 @@ function Home() {
       <section className='w-full p-0 grid grid-cols-2 justify-between space-x-2 '>
         {/* left section */}
         <div className='ml-3 flex-col'>
-          <div className='flex space-x-4 mt-2 '>
-            <img
-              src='/assets/relivvLogo2.png'
-              className='object-contain h-7'
-              alt=''
-            />
-            <div className='flex mt-1 space-x-3 sm:spacex-5 md:space-x-8 lg:space-x-12'>
-              <p className='text-xs inline-flex md:text-sm'>Book a session</p>
-              <p className='text-xs inline-flex md:text-sm '>Health Tips</p>
-              <p className='text-xs inline-flex md:text-sm '>Online Libary</p>
+          <div className='flex justify-between mt-2 '>
+            <div>
+              <img
+                src='/assets/relivvLogo2.png'
+                className='object-contain h-7'
+                alt=''
+              />
+            </div>
+
+            <div className='flex mr-4 mt-1 space-x-3 sm:spacex-5 md:space-x-8 lg:space-x-12'>
+              <p className='text-xs inline-flex md:text-sm cursor-pointer'>
+                Book a session
+              </p>
+              <p className='text-xs inline-flex md:text-sm cursor-pointer'>
+                Health Tips
+              </p>
+              <p className='text-xs inline-flex md:text-sm cursor-pointer'>
+                Online Libary
+              </p>
             </div>
           </div>
 
-          <div className='flex-col mt-7 sm:mt-15'>
+          <div className='flex-col mt-7 sm:mt-15 px-4 mb-10'>
             <div className='mb-5 sm:mt-15 md:mt-25 lg:mt-30 lg:mt-18'>
-              <h1 className='font-bold text-lg sm:text-2xl md:text-5xl lg:7xl'>
+              <h1 className='font-bold text-3xl sm:text-2xl md:text-5xl lg:7xl'>
                 We got you!
               </h1>
             </div>
@@ -43,7 +60,7 @@ function Home() {
         </div>
 
         {/* right section */}
-        <div className='flex-col flex sm:h-50  bg-[#292D34] text-white rounded-l-[50px]'>
+        <div className='flex-col flex  px-4   bg-[#292D34] text-white rounded-l-[50px]'>
           <div className='mt-2 p-2 mr-4'>
             <div className='flex justify-end space-x-3'>
               <button className='text-xs sm:text-lg md:text-lg'>Login</button>
@@ -53,7 +70,7 @@ function Home() {
             </div>
             <div className=' mt-4 justify-center p-4'>
               <img
-                className='object-contain'
+                className='object-contain '
                 src='/assets/LandingPageMain.svg'
                 alt=''
               />
@@ -96,8 +113,107 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* secion 3 */}
+      <div className='p-3 mt-5'>
+        <div className='flex justify-center text-lg font-bold sm:text-2xl md:text-5xl lg:7xl'>
+          <h1>Health Tips</h1>
+        </div>
+        <div className='grid grid-cols-3 p-2 space-x-2'>
+          <div className='shadow p-2 flex flex-col'>
+            <h3 className='font-semibold text-sm sm:text-lg md:text-2xl lg:text-3xl sm:mt-5 md:mt-8 lg:mt-12'>
+              Learn, Track <span>&</span> Improve
+            </h3>
+            <p className='mt-2 text-sm sm:text-lg md:text-2xl lg:text-3xl'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
+              saepe architecto, minus veritatis repudiandae labore odio dolores
+              accusamus iure consectetur.
+            </p>
+            <hr className='h-1 justify-end mt-4 bg-green-400' />
+          </div>
+
+          <div className='shadow p-2'>
+            <h3 className='font-semibold text-sm sm:text-lg md:text-2xl lg:text-3xl sm:mt-5 md:mt-8 lg:mt-12'>
+              Learn, Track <span>&</span> Improve
+            </h3>
+            <p className='mt-2 text-sm sm:text-lg md:text-2xl lg:text-3xl'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
+              saepe architecto, minus veritatis repudiandae labore odio dolores
+              accusamus iure consectetur.
+            </p>
+            <div>
+              <hr className='h-1 mt-4 justify-end bg-green-400' />
+            </div>
+          </div>
+          <div className='shadow p-2'>
+            <h3 className='font-semibold text-sm sm:text-lg md:text-2xl lg:text-3xl sm:mt-5 md:mt-8 lg:mt-12'>
+              Learn, Track <span>&</span> Improve
+            </h3>
+            <p className='mt-2 text-sm sm:text-lg md:text-2xl lg:text-3xl'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
+              saepe architecto, minus veritatis repudiandae labore odio dolores
+              accusamus iure consectetur.
+            </p>
+            <hr className='h-1 mt-4 bg-green-400' />
+          </div>
+        </div>
+        <div className='flex  justify-center'>
+          <div>
+            <span className='text-green-400'>-</span>
+            <span>-</span>
+            <span>-</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 4 */}
+      <div>
+        <div className='flex justify-center text-lg font-bold sm:text-2xl md:text-5xl lg:7xl'>
+          <h1>Our Volunteers</h1>
+        </div>
+        <div className='grid grid-cols-4 justify-center mt-20 mb-10 p-2'>
+          <div className='flex justify-center flex-col'>
+            <div className='border justify-center h-20 w-20 flex items-center rounded-full bg-green-300'>
+              <div>
+                <QuestionMarkCircleIcon className='h-10 text-white w-10 rounded-full' />
+              </div>
+            </div>
+            <p className='text-xs'>Mental disorder</p>
+          </div>
+
+          <div className='flex justify-center flex-col'>
+            <div className='border justify-center h-20 w-20 flex items-center rounded-full bg-green-300'>
+              <PlusCircleIcon className='h-10 text-white w-10 rounded-full' />
+            </div>
+            <p className='text-xs'>General Medicine</p>
+          </div>
+
+          <div className='flex justify-center flex-col'>
+            <div className='border justify-center h-20 w-20 flex items-center rounded-full bg-green-300'>
+              <PuzzleIcon className='h-10  text-white rounded-full' />
+            </div>
+            <p className='text-xs'>Sexologist</p>
+          </div>
+
+          <div className='flex flex-col'>
+            <div className='border justify-center h-20 w-20 flex items-center rounded-full bg-green-300'>
+              <ShieldCheckIcon className='h-10  text-white rounded-full' />
+            </div>
+            <p className='text-xs'>Fitness Expert</p>
+          </div>
+        </div>
+        <div>
+          <div className='flex justify-center mt-13'>
+            <span className='text-green-400'>-</span>
+            <span>-</span>
+            <span>-</span>
+          </div>
+        </div>
+      </div>
+
+      {/* section 5 */}
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home
